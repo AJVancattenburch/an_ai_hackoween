@@ -8,6 +8,14 @@ export const api = Axios.create({
   timeout: 8000
 })
 
+export const imageApi = Axios.create({
+  baseURL: 'https://a02a05397ba7258176.gradio.live/',
+  timeOut: 16000
+  // headers: {
+  //   'Content-Type':  'application/json',
+  // }
+})
+
 api.interceptors.request.use(config => config, handleAxiosError)
 api.interceptors.response.use(response => response, handleAxiosError)
 

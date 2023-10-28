@@ -1,0 +1,13 @@
+
+  {
+    "name": "an_ai_hackoween",
+    "version": "1.0.0",
+    "scripts": {
+      "build": "npm run setup:server",
+      "setup:app": "npm run setup:server && npm run setup:client",
+      "setup:client": "cd an_ai_hackoween.client && npm i",
+      "setup:server": "cd an_ai_hackoween && npm i",
+      "start": "node an_ai_hackoween/index.js"
+    }
+  }
+  

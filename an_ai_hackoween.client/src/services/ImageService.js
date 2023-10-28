@@ -7,7 +7,7 @@ class imageService{
     async generateImage(prompt){
         const body = {
             "prompt": prompt,
-            "negative_prompt": "naked, nsfw, nude,  inappropriate",
+            "negative_prompt": "naked, nsfw, nude, inappropriate",
             "steps": 20,
             "sampler_index": "DDIM"
         }

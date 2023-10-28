@@ -4,6 +4,12 @@
       <TextBox :text="text" />
     </div>
   </div>
+  <div class="card text-dark bg-dark bg-primary" style="height: 400px; width: 400px;">
+    <div class="card-body">
+      <h4 class="card-title">Title</h4>
+      <p class="card-text">Text</p>
+    </div>
+  </div>
 </template>
 
 <script>

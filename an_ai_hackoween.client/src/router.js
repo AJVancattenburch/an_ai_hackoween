@@ -26,6 +26,11 @@ const routes = [
     path: '/imagegeneration',
     name: 'Image Generation',
     component: loadPage('ImageGenerationPage')
+  },
+  {
+    path: '/textgeneration',
+    name: 'Text Generation',
+    component: loadPage('TextGenerationPage')
   }
 ]
 

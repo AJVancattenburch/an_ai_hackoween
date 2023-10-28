@@ -30,9 +30,7 @@ export const AppState = reactive({
       description: ['Busy street'],
       steps: 2
     }
-  ]
-=======
+  ],
   image: {
   }
->>>>>>> Stashed changes
 })

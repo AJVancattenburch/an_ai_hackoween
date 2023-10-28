@@ -3,10 +3,18 @@ import { baseURL, apiKey } from '../env'
 import { logger } from '../utils/Logger.js'
 
 export const api = Axios.create({
-  apiKey,
   baseURL,
   timeout: 8000
 })
+
+
+  export const textApi = Axios.create({
+    baseURL: 'https://api.openai.com/v1/engines/davinci/completions',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${apiKey}`
+    }
+  })
 
 export const imageApi = Axios.create({
   baseURL: 'https://a02a05397ba7258176.gradio.live/',

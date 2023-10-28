@@ -30,14 +30,19 @@
 
 
 <script>
-import { computed } from "vue";
+import { computed, onMounted } from "vue";
 import { AppState } from "../AppState.js";
+import { logger } from "../utils/Logger.js";
 
 export default {
   setup() {
+    onMounted(
+      AppState.activeRoom = AppState.rooms[0]
+    )
     return {
       activeRoom: computed(() => AppState.activeRoom),
       gotoRoom(exit) {
+        logger.log('exit', AppState.activeRoom)
         AppState.activeRoom = AppState.rooms.find(r => r.id == exit)
       }
     }

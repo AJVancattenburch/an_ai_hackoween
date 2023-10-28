@@ -5,7 +5,6 @@ export const AppState = reactive({
   user: {},
   /** @type {import('./models/Account.js').Account} */
   account: {},
-<<<<<<< Updated upstream
   /** @type {import('./models/Room.js').Room} */
   activeRoom: {},
   rooms: [
@@ -31,9 +30,6 @@ export const AppState = reactive({
       description: ['Busy street'],
       steps: 2
     }
-  ]
-=======
-  image: {
-  }
->>>>>>> Stashed changes
+  ],
+  image: {}
 })

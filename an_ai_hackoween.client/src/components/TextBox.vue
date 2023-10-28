@@ -8,8 +8,13 @@
         <i class="mdi mdi-close-thick"></i>
       </span>
     </p>
-    <p class="p-4 min-height selectable" id="text">
+    <p class="p-4 min-height user-select-none" id="text">
       
+    </p>
+    <p class="text-center">
+      <span class="selectable p-2 px-4" v-for="option in options" :key="option">
+        {{ option }}
+      </span>
     </p>
   </div>
 </template>
@@ -20,12 +25,13 @@ import { onMounted } from 'vue';
 
 export default {
   props: {
-    text: {Type: String, required: true}
+    text: {Type: String, required: true},
+    options: {Type: Array, required: true}
   },
 
   setup(props){
-    var i = 0;
-    var speed = 5;
+    let i = 0;
+    const speed = 5;
 
     function typeWriter() {
       if (i < props.text.length) {

@@ -11,6 +11,8 @@
 </template>
 
 <script>
+import { logger } from '../utils/Logger.js';
+
 
 
 export default {
@@ -19,7 +21,6 @@ export default {
     let playing = false
 
     return {
-      // music,
       playing,
 
       toggleAudio(){
@@ -27,9 +28,11 @@ export default {
         if(!playing){
           audio.play();
           playing = true;
+          logger.log(playing)
         } else{
           audio.pause();
           playing = false;
+          logger.log(playing)
         }
       }
     }

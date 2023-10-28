@@ -40,3 +40,36 @@ $color-ranges: (
 $font-sans-serif: Open Sans;
 $font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 $gradient: linear-gradient(180deg, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0));
+
+
+/*SECTION - Scrollbar styling properties START */
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #0a0b14f3;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #29356a;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #232642;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #0a0b14f3;
+}
+
+::-webkit-scrollbar-button {
+  background: #efefefc7;
+  border-radius: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-button:hover {
+  background: #efefefc7;
+}
+
+/*SECTION - Scrollbar styling properties END */

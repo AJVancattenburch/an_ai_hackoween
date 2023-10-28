@@ -21,21 +21,22 @@ export const reader = (file) =>
   })
 
 //NOTE - Takes the base64 string and converts it to an image
-// export const base64ToImage = (base64String) => {
-//   const img = new Image();
-//   img.src = base64String;
-//   return img;
-// }
+export const base64ToImage = (base64String) => {
+  const img = new Image();
+  img.src = base64String;
+  return img;
+}
 
 
 //NOTE - This is the same as the above function, but it returns a promise
-export const base64ToImage = (base64String) =>
-  new Promise((resolve, reject) => {
-    const img = new Image();
-    img.src = base64String;
-    img.onload = () => resolve(img);
-    img.onerror = reject;
-  })
+// export const base64ToImage = (base64String) =>
+//   new Promise((resolve, reject) => {
+//     const img = new Image();
+//     img.src = base64String;
+//     img.onload = () => resolve(img);
+//     img.onerror = reject;
+//   })
+
 //Bring it into the component like this:
 // import { base64ToImage } from '@/utils/imageHelpers'
 //Then use it like this:

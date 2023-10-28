@@ -1,15 +1,20 @@
 <template>
-  <div class="bg-black green-border green-color box-size">
-    <p class="text-end green-background text-black fs-5 fw-semibold">
+  <div class="bg-black green-border green-color box-size my-5">
+    <p class="text-end green-background text-black fs-5">
       <span class="px-2 py-1 selectable" title="See Previous">
-        -
+        <i class="mdi mdi-window-minimize"></i>
       </span>
       <span class="px-2 py-1 selectable" title="Continue">
-        x
+        <i class="mdi mdi-close-thick"></i>
       </span>
     </p>
-    <p class="p-4 min-height" id="text" onclick="typewriter('cancelled')">
+    <p class="p-4 min-height user-select-none" id="text">
       
+    </p>
+    <p class="text-center">
+      <span class="selectable p-2 px-4" v-for="option in options" :key="option">
+        {{ option }}
+      </span>
     </p>
   </div>
 </template>
@@ -20,12 +25,13 @@ import { onMounted } from 'vue';
 
 export default {
   props: {
-    text: {Type: String, required: true}
+    text: {Type: String, required: true},
+    options: {Type: Array, required: true}
   },
 
   setup(props){
-    var i = 0;
-    var speed = 30;
+    let i = 0;
+    const speed = 5;
 
     function typeWriter() {
       if (i < props.text.length) {
@@ -59,10 +65,14 @@ export default {
 }
 
 .box-size{
-  width: 75vw;
+  width: 90vw;
+  height: fit-content;
 }
 
-.min-height{
-  height: fit-content;
+@media(min-width: 768px){
+  .box-size{
+    width: 50vw;
+    height: fit-content;
+  }
 }
 </style>

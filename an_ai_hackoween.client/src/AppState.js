@@ -31,4 +31,8 @@ export const AppState = reactive({
       steps: 2
     }
   ]
+=======
+  image: {
+  }
+>>>>>>> Stashed changes
 })

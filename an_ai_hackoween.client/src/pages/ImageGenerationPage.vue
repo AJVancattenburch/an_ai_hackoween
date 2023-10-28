@@ -7,9 +7,9 @@
                     <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" v-model="editable.prompt">
                     <button class="btn btn-outline-success" type="button" id="button-addon1" @click="generateImage">Button</button>
                 </div>
-                <div class="bg-light rounded-3 w-100 h-auto" id="imageFrame" style="">
-                    <!-- <h1 class="text-center">Image Placeholder</h1> -->
-                    <img :src="image.src" class="img-fluid object-fit-cover rounded-3">
+                <div class="bg-light rounded-3 w-100" id="imageFrame" style="">
+                    <h1 class="text-center" v-if="!image.src">Waiting For Image...</h1>
+                    <img :src="image.src" class="img-fluid object-fit-cover rounded-3" v-if="image">
                 </div>
             </div>
         </div>

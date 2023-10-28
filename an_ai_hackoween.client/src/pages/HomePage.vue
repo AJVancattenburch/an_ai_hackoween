@@ -5,14 +5,8 @@
   <div class="d-flex justify-content-center">
     <TextBox :text="text" :options="options" />
   </div>
-  <div class="d-flex justify-content-center m-2 mb-4">
+  <div class="d-flex justify-content-center m-2">
     <img src="../assets/img/grimCodeWorks.png" alt="Castle Grimtol" class="img-fluid logo">
-  </div>
-  <div class="card text-dark bg-dark bg-primary" style="height: 400px; width: 400px;">
-    <div class="card-body">
-      <h4 class="card-title">Title</h4>
-      <p class="card-text">Text</p>
-    </div>
   </div>
 </template>
 

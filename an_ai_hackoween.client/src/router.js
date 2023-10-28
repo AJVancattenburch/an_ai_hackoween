@@ -28,9 +28,9 @@ const routes = [
     component: loadPage('ImageGenerationPage')
   },
   {
-    path: '/textgeneration',
-    name: 'Text Generation',
-    component: loadPage('TextGenerationPage')
+    path: '/prompt',
+    name: 'Prompt Page',
+    component: loadPage('PromptPage')
   }
 ]
 

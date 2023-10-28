@@ -32,5 +32,6 @@ export const AppState = reactive({
     }
   ],
   image: {
-  }
+  },
+  prompt: [],
 })

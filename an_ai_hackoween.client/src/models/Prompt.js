@@ -1,0 +1,1 @@
+//Make a model for all openai prompts

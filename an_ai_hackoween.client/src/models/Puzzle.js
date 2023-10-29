@@ -7,16 +7,9 @@ export class Puzzle{
         this.question = data.question;
         this.example = data.example;
         this.answer = data.answer;
-        this.pushToAppState()
-    }
-    pushToAppState(){
-        AppState.puzzles.push(this)
-        console.log("Pushed to appstate")
-        logger.log("Pushed to appstate")
     }
 }
 
-const test = new Puzzle(4,4,4,4,4)
 
 const rm_4 = new Puzzle({
     room: 4,
@@ -89,6 +82,3 @@ const rm_9 = new Puzzle({
     example: `XO("xooxx") => false`,
     answer: 'True'
 })
-
-console.log("Hello Puzzles")
-AppState.puzzles.push(rm_2,rm_3,rm_4,rm_5,rm_6,rm_7, rm_9)

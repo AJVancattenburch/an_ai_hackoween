@@ -23,7 +23,7 @@ const routes = [
     beforeEnter: authGuard
   },
   {
-    path: '/imagegeneration',
+    path: '/puzzles',
     name: 'Image Generation',
     component: loadPage('ImageGenerationPage')
   },

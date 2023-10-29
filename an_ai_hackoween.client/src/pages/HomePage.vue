@@ -1,23 +1,25 @@
 <template>
-  <div class="bg-secondary text dark selectable">
-    <a @click="handleTextPage">AI Text testing page</a>
-  </div>
+  <!-- <div class="bg-secondary text dark selectable">
+<a @click="handleTextPage">AI Text testing page</a> -->
+  <!-- </div> -->
   <div class="d-flex justify-content-center m-2 mt-4">
-    <img src="../assets/img/castleGrimtolLogo.png" alt="Castle Grimtol" class="img-fluid logo">
+    <img src="../assets/img/castleGrimtolLogo.png" alt="Castle Grimtol" class="img-fluid big-logo">
   </div>
-  <div class="ms-4">
+  <div class="ms-5">
     <AudioComponent />
   </div>
-  <button class="green-background" data-bs-toggle="offcanvas" href="#sampleComponent" role="button"
-    aria-controls="sampleComponent">
+  <!-- <button class="green-background" data-bs-toggle="offcanvas" href="#sampleComponent" role="button" aria-controls="sampleComponent">
     Off Canvas Button
-  </button>
-  <Rooms />
+  </button> -->
   <div class="d-flex justify-content-center">
     <TextBox :text="text" :options="options" />
   </div>
-  <div class="d-flex justify-content-center m-1">
+  <div class="d-flex justify-content-center align-items-center m-1 mb-4 text-white">
+    <p class="m-0 fs-2">
+      made with <span class="goopy-text">swag</span> by
+    </p>
     <img src="../assets/img/grimCodeWorks.png" alt="CodeWorks" class="img-fluid logo">
+    <span class="fs-2">alumns</span>
   </div>
 </template>
 
@@ -50,5 +52,9 @@ export default {
 <style scoped lang="scss">
 .green-background {
   background-color: #28ff82;
+}
+
+.goopy-text {
+  font-family: 'Nosifer', sans-serif;
 }
 </style>

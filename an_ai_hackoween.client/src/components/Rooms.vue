@@ -1,7 +1,7 @@
 <template>
   <section class="row">
-    <div class="card col-4 mx-auto">
-      <div class="card-body">
+    <div class="green-border green-text bg-black col-12 box-size">
+      <div class="green-text">
         <blockquote class="blockquote d-flex flex-column mb-0">
           Name:
           <p>{{ activeRoom.name }}</p>
@@ -33,7 +33,7 @@
         <form @submit.prevent="parseCommand()" class="input-group mb-3">
           <input v-model="editable" type="text" class="form-control" placeholder=""
             aria-label="Example text with button addon" aria-describedby="button-addon1">
-          <button class="btn btn-outline-secondary" type="submit" id="button-addon1">Submit</button>
+          <button class="btn green-border green-text" type="submit" id="button-addon1">Submit</button>
         </form>
       </div>
     </div>
@@ -161,4 +161,40 @@ export default {
 </script>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.green-border{
+  border: 3px solid #28ff82;
+}
+
+.green-color{
+  color: #28ff82;
+}
+
+.green-background{
+  background-color: #28ff82;
+}
+
+.box-size{
+  width: 90vw;
+  height: fit-content;
+}
+
+p{
+  color: #28ff82;
+}
+
+div{
+  color: #28ff82;
+}
+
+button{
+  color: #28ff82;
+}
+
+@media(min-width: 768px){
+  .box-size{
+    width: 50vw;
+    height: fit-content;
+  }
+}
+</style>

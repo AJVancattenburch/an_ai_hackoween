@@ -3,10 +3,10 @@
     <router-view />
   </main>
   <OffCanvasComponent id="sampleComponent">
-    <template #title>
+    <template id="title">
       Sample Title
     </template>
-    <template #body>
+    <template id="body">
       <p>
         Ooooh spooky sample body
       </p>

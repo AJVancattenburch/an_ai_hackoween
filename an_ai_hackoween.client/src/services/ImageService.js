@@ -8,7 +8,7 @@ class imageService{
         const body = {
             "prompt": prompt,
             "negative_prompt": "naked, nsfw, nude, inappropriate",
-            "steps": 20,
+            "steps": 30,
             "sampler_index": "DDIM"
         }
         const res = await imageApi.post('sdapi/v1/txt2img', body)

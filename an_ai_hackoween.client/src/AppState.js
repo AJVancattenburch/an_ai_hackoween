@@ -36,7 +36,7 @@ export const AppState = reactive({
       e: ['rm_1', 'rm_4', 'rm_7'],
       location: ['Bakery', 'Interior'],
       npc: ['humbleBaker'],
-      ooi: [],
+      ooi: ['rm_5'],
       kind: 'Scenario',
       description: ['Moldy bakery'],
       steps: 2
@@ -249,7 +249,7 @@ export const AppState = reactive({
   oois: [
     {
       id: 'chippedSkull',
-      name: 'Skull',
+      name: 'Chipped Skull',
       description: 'A skull with a chip in it',
       type: 'bobble',
       collected: false,
@@ -313,7 +313,7 @@ export const AppState = reactive({
     },
     {
       id: 'kingEvidence',
-      name: 'Evidence',
+      name: 'Kings evidence',
       description: 'Evidence of the Kings crimes',
       type: 'bobble',
       collected: false,
@@ -329,7 +329,7 @@ export const AppState = reactive({
     },
     {
       id: 'queenEvidence',
-      name: 'Incrimination',
+      name: 'Queens evidence',
       description: 'Evidence of the Queens crimes',
       type: 'bobble',
       collected: false,
@@ -369,7 +369,7 @@ export const AppState = reactive({
     },
     {
       id: 'cw-outline',
-      name: 'CodeWorks',
+      name: 'Hollow CodeWorks Emblem',
       description: 'Hollow CodeWorks Emblem',
       type: 'bobble',
       collected: false,
@@ -377,7 +377,7 @@ export const AppState = reactive({
     },
     {
       id: 'cw-solid',
-      name: 'CodeWorkers',
+      name: 'Authentic CodeWorks Emblem',
       description: 'Authentic CodeWorks Emblem',
       type: 'bobble',
       collected: false,

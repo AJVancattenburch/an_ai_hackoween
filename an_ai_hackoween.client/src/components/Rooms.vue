@@ -30,7 +30,7 @@
           <p v-for="step in activeRoom.steps" :key="step">{{ activeRoom.steps }}</p> -->
         </blockquote>
         <button v-if="challenge">Challenge </button>
-        <form @submit.prevent="parseCommand()" class="input-group mb-3">
+        <form @submit.prevent="parseCommand()" class="input-group my-3">
           <input v-model="editable" type="text" class="form-control" placeholder=""
             aria-label="Example text with button addon" aria-describedby="button-addon1">
           <button class="btn green-border green-text" type="submit" id="button-addon1">Submit</button>

@@ -5,15 +5,19 @@
   <div class="d-flex justify-content-center m-2 mt-4">
     <img src="../assets/img/castleGrimtolLogo.png" alt="Castle Grimtol" class="img-fluid logo">
   </div>
+  <div>
+    <AudioComponent />
+  </div>
   <div class="d-flex justify-content-center">
     <TextBox :text="text" :options="options" />
   </div>
-  <div class="d-flex justify-content-center m-2 mb-4">
+  <div class="d-flex justify-content-center m-2">
     <img src="../assets/img/grimCodeWorks.png" alt="Castle Grimtol" class="img-fluid logo">
   </div>
 </template>
 
 <script>
+import AudioComponent from '../components/AudioComponent.vue';
 import TextBox from '../components/TextBox.vue';
 import { useRouter } from 'vue-router';
 import { logger } from '../utils/Logger.js';
@@ -34,7 +38,7 @@ export default {
           options: ["Yes", "No"]
         };
     },
-    components: { TextBox }
+    components: { TextBox, AudioComponent }
 }
 </script>
 

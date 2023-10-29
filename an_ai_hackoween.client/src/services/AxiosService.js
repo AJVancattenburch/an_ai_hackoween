@@ -17,7 +17,7 @@ export const api = Axios.create({
   // })
 
 export const imageApi = Axios.create({
-  baseURL: 'https://a02a05397ba7258176.gradio.live/',
+  baseURL: 'https://6e2bc15ccbeece37ea.gradio.live/',
   timeOut: 16000,
 })
 

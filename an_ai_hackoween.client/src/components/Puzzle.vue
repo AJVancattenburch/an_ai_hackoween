@@ -1,6 +1,9 @@
 <template>
     <section class="container-fluid bg-black green-border green-color box-size my-5">
         <div class="bg-black p-2">
+            <div class="row justify-content-center">
+                <img class="img-fluid object-fit-cover rounded-3 mb-3" :src="puzzle.image">
+            </div>
             <button class="btn btn-success" @click="generateImage(puzzle.description)">Generate Image</button>
             <p>{{ puzzle.description }}</p>
             <h4>{{ puzzle.example }}</h4>
@@ -11,10 +14,10 @@
                 <button class="btn btn-success" type="button" id="button-addon1" @click="checkAnswer()">Check</button>
             </div>
             <div>
-              <p class="text-danger" hidden id="incorrect">
+              <p class="text-danger" v-if="puzzle.correct == false">
                 Your answer is not correct!
               </p>
-              <p class="green-color" hidden id="correct">
+              <p class="green-color" v-if="puzzle.correct">
                 Great job!
               </p>
             </div>
@@ -45,7 +48,9 @@
         try{
             // const prompt = puzzle.description
             logger.log("Generating prompt:", prompt)
-            await imageservice.generateImage(prompt)
+            // await imageservice.generateImage(prompt)
+            props.puzzle.image =  await imageservice.generateImage(prompt)
+            props.puzzle.image = `data:image/png;base64, ${props.puzzle.image}`
         } catch (e){
             Pop.error(e)
         }
@@ -58,9 +63,9 @@
           let userAnswer = input.value
 
           if(userAnswer === props.puzzle.answer){
-            document.getElementById("correct").removeAttribute('hidden').setAttribute('disabled', '')
+            props.puzzle.correct = true;
           } else{
-            document.getElementById("incorrect").removeAttribute('hidden')
+            props.puzzle.correct = false
           }
         }
       } 

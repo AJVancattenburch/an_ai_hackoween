@@ -1,16 +1,19 @@
 <template>
   <div>
-    <button class="green-background" onclick="toggleAudio()" v-if="playing">
+    <button class="green-background" @click="toggleAudio()" v-if="playing">
       <i class="mdi mdi-volume-high"></i>
     </button>
-    <button class="green-background" onclick="toggleAudio()" v-else>
+    <button class="green-background" @click="toggleAudio()" v-else>
       <i class="mdi mdi-volume-off"></i>
     </button>
-    <audio src="../assets/music/Survival_Horror_Music_Pack_vol_01/BGM_M4A/Town_-_Creepy_Place.m4a" id="musicPlayer"></audio>
+    <audio src="/assets/music/Survival_Horror_Music_Pack_vol_01/BGM_M4A/Town_-_Unsafe_Haven.m4a" id="musicPlayer"></audio>
   </div>
 </template>
 
 <script>
+import { logger } from '../utils/Logger.js';
+
+
 
 export default {
   setup(){
@@ -25,9 +28,11 @@ export default {
         if(!playing){
           audio.play();
           playing = true;
+          logger.log(playing)
         } else{
           audio.pause();
           playing = false;
+          logger.log(playing)
         }
       }
     }

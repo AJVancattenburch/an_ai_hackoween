@@ -418,7 +418,7 @@ export const AppState = reactive({
     },
     {
       room: 3,
-      description:  `The Mason's Apprentice is tasked with building a carriage, you need to figure out how many people will still be on the carriage after it's last trip.
+      description: `The Mason's Apprentice is tasked with building a carriage, you need to figure out how many people will still be on the carriage after its last trip.
       You are provided with a list (or array) of integer pairs. 
       Elements of each pair represent the number of people that get on the carriage (the first item) and the number of people 
       that get off the carriage (the second item) at a bus stop.
@@ -446,7 +446,7 @@ export const AppState = reactive({
     },
     {
       room: 9,
-      description:`In your ultimate puzzle, a quest awaits to balance the cosmic forces of 'x' and 'o'. Craft a spellbound method that, 
+      description: `In your ultimate puzzle, a quest awaits to balance the cosmic forces of 'x' and 'o'. Craft a spellbound method that, 
       with unwavering case-insensitivity, ensures the string holds an equal number of these mystical characters, returning a boolean verdict 
       to maintain the harmony of the universe.`,
       question: `What does the string: 'ZOXCIJOZXIJCIOXCJZOCZXJ' return?`,

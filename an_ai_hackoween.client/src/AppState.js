@@ -389,7 +389,7 @@ export const AppState = reactive({
   prompt: [],
   puzzles: [
     {
-      room: 4,
+      room: 'rm_4',
       description: `In the mystical emporium of the magic merchant, an urgent quest beckons. 
       Armed only with a mystical Javascript scroll, you are tasked with crafting a wondrous function that performs 
       basic mathematical operations, rescuing the merchant from the predicament of a lost abacus.`,
@@ -398,7 +398,7 @@ export const AppState = reactive({
       answer: '31'
     },
     {
-      room: 5,
+      room: 'rm_5',
       description: `Amidst the loyal knight's sickness, a dire situation unfolds within the realm. The spirit healer, 
       entrusted with a sacred incantation to cure the knight, must weave her magic to cleanse the sentence of 
       all vowels and inscribe the true spell onto a scroll to rescue the ailing knight.`,
@@ -407,7 +407,7 @@ export const AppState = reactive({
       answer: 'wghfwqw'
     },
     {
-      room: 2,
+      room: 'rm_2',
       description: `You have entered the Humble Baker's kitchen. You find a puzzle scroll with the following instructions:
       I am making a cake for the King! I have the width, length, and height of it; but I must know the volume!
       Write a function that takes in an array as an argument, the array will contain 3 integers in the following order [width, length, height]
@@ -417,7 +417,7 @@ export const AppState = reactive({
       answer: '62790'
     },
     {
-      room: 3,
+      room: 'rm_3',
       description: `The Mason's Apprentice is tasked with building a carriage, you need to figure out how many people will still be on the carriage after its last trip.
       You are provided with a list (or array) of integer pairs. 
       Elements of each pair represent the number of people that get on the carriage (the first item) and the number of people 
@@ -428,7 +428,7 @@ export const AppState = reactive({
       answer: '17'
     },
     {
-      room: 6,
+      room: 'rm_6',
       description: `In the chivalrous ambiance of the knights' barracks, you are summoned to create a program that calculates the summation of numbers from 1 to num, 
       embodying the knightly virtues of precision and discipline, and showcasing your mathematical prowess to earn your place among the noble ranks. `,
       question: 'What is the summation of 213?',
@@ -436,7 +436,7 @@ export const AppState = reactive({
       answer: '22791'
     },
     {
-      room: 7,
+      room: 'rm_7',
       description: `In the mystical chamber of the wizard, a challenge awaits those who seek to discern the outcome of a magical duel. 
       Craft a conjuring code that, like the casting of spells, determines the winner when two elements, "Player 1" and "Player 2" 
       are pitted against each other in a rock-paper-scissors battle, and watch as the mystical scrolls unveil the victor's name.`,
@@ -445,7 +445,7 @@ export const AppState = reactive({
       answer: 'Player 2'
     },
     {
-      room: 9,
+      room: 'rm_9',
       description: `In your ultimate puzzle, a quest awaits to balance the cosmic forces of 'x' and 'o'. Craft a spellbound method that, 
       with unwavering case-insensitivity, ensures the string holds an equal number of these mystical characters, returning a boolean verdict 
       to maintain the harmony of the universe.`,

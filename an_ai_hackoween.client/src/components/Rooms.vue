@@ -1,6 +1,6 @@
 <template>
   <section class="row">
-    <div class="green-border green-text bg-black col-12 box-size">
+    <div class="green-border green-text bg-black col-12 box-size p-4">
       <div class="green-text">
         <blockquote class="blockquote d-flex flex-column mb-0">
           Name:

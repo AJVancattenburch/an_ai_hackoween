@@ -4,6 +4,10 @@ import { DbConnection } from './db/DbConfig'
 import { socketProvider } from './SocketProvider'
 import { Startup } from './Startup'
 import { logger } from './utils/Logger'
+import dotenv from 'dotenv';
+
+// Load environment variables from .env file
+dotenv.config();
 
 // create server & socketServer
 const app = express()
@@ -23,6 +27,9 @@ socketProvider.initialize(httpServer)
 
 // Connect to Atlas MongoDB
 DbConnection.connect()
+
+// Access the OpenAI API key
+const apiKey = process.env.OPENAI_API_KEY;
 
 // Start Server
 httpServer.listen(port, () => {

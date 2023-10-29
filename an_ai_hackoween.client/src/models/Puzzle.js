@@ -1,13 +1,15 @@
 import { AppState } from "../AppState";
+import { logger } from "../utils/Logger";
 export class Puzzle{
     constructor(data){
         this.room = data.room;
         this.description = data.description;
         this.question = data.question;
         this.example = data.example;
-        this.solution = data.solution;
+        this.answer = data.answer;
     }
 }
+
 
 const rm_4 = new Puzzle({
     room: 4,

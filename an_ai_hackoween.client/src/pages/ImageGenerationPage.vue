@@ -14,6 +14,11 @@
             </div>
         </div>
     </section>
+    <section>
+        <p class="text-white">
+            <Puzzle v-for="p in AppState.puzzles" :puzzle="p" :key="p"/>
+        </p>
+    </section>
 </template>
   
 <script>
@@ -22,11 +27,12 @@
   import Pop from "../utils/Pop.js"
   import { logger } from "../utils/Logger.js"  
   import { imageservice } from '../services/ImageService'
+    import Puzzle from '../components/Puzzle.vue'
   
   export default {
     components: {
-
-    },
+    Puzzle
+},
     setup() {
       const editable = ref({})
       let image = ref({})
@@ -48,6 +54,7 @@
       return {
         editable,
         image,
+        AppState,
         generateImage
       } 
     }

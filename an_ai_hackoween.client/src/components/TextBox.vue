@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-black green-border green-color box-size my-5">
-    <p class="text-end green-background text-black fs-5">
+  <div class="bg-black green-border green-color box-size box-shadow my-5">
+    <p class="text-end green-background box-shadow-2 text-black fs-5">
       <span class="px-2 py-1 selectable" title="See Previous">
         <i class="mdi mdi-window-minimize"></i>
       </span>
@@ -52,6 +52,15 @@ export default {
 
 
 <style lang="scss" scoped>
+
+.box-shadow{
+  box-shadow: inset 2px 2px rgb(101, 101, 101);
+}
+
+.box-shadow-2{
+  box-shadow: 2px 1px rgb(101, 101, 101);
+}
+
 .green-border{
   border: 3px solid #28ff82;
 }

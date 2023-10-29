@@ -4,4 +4,4 @@ export const useSockets = false
 export const domain = 'dev-82py0l5jt61zn10o.us.auth0.com'
 export const clientId = 'hykoUyNDCrsovYQXXUKObg3y1Iw4UhUS'
 export const audience = 'http://sandbox.com'
-export const apiKey = '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'
+export const apiKey = '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'

@@ -14,6 +14,7 @@ class imageService{
         const res = await imageApi.post('sdapi/v1/txt2img', body)
         logger.log(res.data.images)
         AppState.image.src = `data:image/png;base64, ${res.data.images}`;
+        return res.data.images;
     }
 }
 

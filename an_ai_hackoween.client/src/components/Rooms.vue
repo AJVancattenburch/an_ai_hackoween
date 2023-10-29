@@ -27,6 +27,11 @@
           Steps:
           <p v-for="step in activeRoom.steps" :key="step">{{ activeRoom.steps }}</p>
         </blockquote>
+        <form @submit.prevent="parseCommand()" class="input-group mb-3">
+          <input v-model="editable" type="text" class="form-control" placeholder=""
+            aria-label="Example text with button addon" aria-describedby="button-addon1">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon1">Submit</button>
+        </form>
       </div>
     </div>
   </section>
@@ -83,16 +88,18 @@
 
 
 <script>
-import { computed, onMounted } from "vue";
+import { computed, onMounted, ref } from "vue";
 import { AppState } from "../AppState.js";
 import { logger } from "../utils/Logger.js";
 
 export default {
   setup() {
+    const editable = ref('')
     onMounted(() => {
       AppState.activeRoom = AppState.rooms[0]
     })
     return {
+      editable,
       activeRoom: computed(() => AppState.activeRoom),
       activeNpc: computed(() => AppState.activeNpc),
       activeOoi: computed(() => AppState.activeOoi),
@@ -113,6 +120,10 @@ export default {
       },
       selectOoi(ooi) {
         AppState.activeOoi = AppState.oois.find(o => o.id == ooi)
+      },
+      parseCommand() {
+        let tempArr = editable.value.split(' ')
+        logger.log(tempArr)
       }
     }
   }

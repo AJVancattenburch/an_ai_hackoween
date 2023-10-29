@@ -386,9 +386,7 @@ export const AppState = reactive({
   ],
   image: {
   },
-<<<<<<< Updated upstream
   prompt: [],
-=======
   puzzles: [
     {
       room: 4,
@@ -456,5 +454,4 @@ export const AppState = reactive({
       answer: 'True'
     }
   ]
->>>>>>> Stashed changes
 })

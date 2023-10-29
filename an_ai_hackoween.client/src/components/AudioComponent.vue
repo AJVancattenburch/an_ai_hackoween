@@ -4,7 +4,7 @@
       <i class="mdi mdi-volume-high" v-if="playing"></i>
       <i class="mdi mdi-volume-off" v-else></i>
     </button>
-    <audio src="/assets/music/Survival_Horror_Music_Pack_vol_01/BGM_M4A/Town_-_Unsafe_Haven.m4a" id="musicPlayer"></audio>
+    <audio src="/assets/music/Cinematic Horror/Hidden_Horror_122bpm_120s.mp3" id="musicPlayer"></audio>
   </div>
 </template>
 

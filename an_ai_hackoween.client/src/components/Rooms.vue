@@ -30,7 +30,7 @@
         <form @submit.prevent="parseCommand()" class="input-group mb-3">
           <input v-model="editable" type="text" class="form-control" placeholder=""
             aria-label="Example text with button addon" aria-describedby="button-addon1">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon1">Submit</button>
+          <button class="btn btn-outline-secondary" type="submit" id="button-addon1">Submit</button>
         </form>
       </div>
     </div>
@@ -94,7 +94,7 @@ import { logger } from "../utils/Logger.js";
 
 export default {
   setup() {
-    const editable = ref('')
+    const editable = ref("")
     onMounted(() => {
       AppState.activeRoom = AppState.rooms[0]
     })
@@ -121,8 +121,34 @@ export default {
       selectOoi(ooi) {
         AppState.activeOoi = AppState.oois.find(o => o.id == ooi)
       },
+      collectOoi(index) {
+        let ooi = AppState.oois.find(o => o.id == index)
+        ooi.collected = true;
+        logger.log(ooi, 'OOI')
+      },
       parseCommand() {
-        let tempArr = editable.value.split(' ')
+        let lowerString = editable.value.toLowerCase()
+        let tempArr = lowerString.split(' ')
+
+        this.activeRoom.ooi.forEach(ooi => {
+          let OOI = AppState.oois.find(o => o.id == ooi)
+          logger.log('OOI', OOI)
+          if (tempArr.includes(OOI.name.toLowerCase())) {
+            if (tempArr.includes("collect")) {
+              this.collectOoi(OOI.id)
+            }
+          }
+        })
+
+        this.exits.forEach(exit => {
+          if (tempArr.includes(exit.name.toLowerCase())) {
+            if (tempArr.includes("go")) {
+              this.gotoRoom(exit.id)
+            }
+          }
+        })
+
+
         logger.log(tempArr)
       }
     }

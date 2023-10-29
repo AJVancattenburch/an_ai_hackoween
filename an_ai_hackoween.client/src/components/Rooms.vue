@@ -1,32 +1,35 @@
 <template>
   <section class="row">
     <div class="card col-4 mx-auto">
-      <div class="card-header">
-        Room
-      </div>
       <div class="card-body">
         <blockquote class="blockquote d-flex flex-column mb-0">
           Name:
           <p>{{ activeRoom.name }}</p>
           Exits:
-          <button v-for="(exit, index) in activeRoom.e" :key="index" @click="gotoRoom(exit)">{{ exit }} {{
-            exits[index].name }}</button>
+          <p v-for="(exit, index) in activeRoom.e" :key="index"> {{
+            exits[index].name }}</p>
+          <!-- <button v-for="(exit, index) in activeRoom.e" :key="index" @click="gotoRoom(exit)">{{ exit }} {{
+            exits[index].name }}</button> -->
           Location:
           <p v-for="(location, index) in activeRoom.location" :key="index">{{ location }}</p>
           Non-Playable Characters:
-          <button v-for="(npc, index) in activeRoom.npc" :key="index" @click="selectNpc(npc)" data-bs-toggle="modal"
-            data-bs-target="#npcModal">{{ npc }}</button>
+          <p v-for="(npc, index) in activeRoom.npc" :key="index">{{ npc }}</p>
+          <!-- <button v-for="(npc, index) in activeRoom.npc" :key="index" @click="selectNpc(npc)" data-bs-toggle="modal"
+            data-bs-target="#npcModal">{{ npc }}</button> -->
           Objects of Interest:
-          <button v-for="(ooi, index) in activeRoom.ooi" :key="index" data-bs-toggle="modal" data-bs-target="#ooiModal"
+          <p v-for="(ooi, index) in activeRoom.ooi" :key="index">{{
+            ooi }}</p>
+          <!-- <button v-for="(ooi, index) in activeRoom.ooi" :key="index" data-bs-toggle="modal" data-bs-target="#ooiModal"
             @click="selectOoi(ooi)">{{
-              ooi }}</button>
-          Room Type:
-          <p> {{ activeRoom.kind }}</p>
+              ooi }}</button> -->
+          <!-- Room Type:
+          <p> {{ activeRoom.kind }}</p> -->
           Description:
           <p v-for="description in activeRoom.description" :key="description">{{ description }}</p>
-          Steps:
-          <p v-for="step in activeRoom.steps" :key="step">{{ activeRoom.steps }}</p>
+          <!-- Steps:
+          <p v-for="step in activeRoom.steps" :key="step">{{ activeRoom.steps }}</p> -->
         </blockquote>
+        <button v-if="challenge">Challenge </button>
         <form @submit.prevent="parseCommand()" class="input-group mb-3">
           <input v-model="editable" type="text" class="form-control" placeholder=""
             aria-label="Example text with button addon" aria-describedby="button-addon1">
@@ -104,6 +107,7 @@ export default {
       activeNpc: computed(() => AppState.activeNpc),
       activeOoi: computed(() => AppState.activeOoi),
       portrait: computed(() => AppState.activeNpc.portrait),
+      challenge: computed(() => AppState.puzzles.find(p => p.room == AppState.activeRoom.id)),
       exits: computed(() => {
         let tempArr = []
         for (let i = 0; i < AppState.activeRoom.e.length; i++) {

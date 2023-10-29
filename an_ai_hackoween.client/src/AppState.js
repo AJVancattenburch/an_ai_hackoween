@@ -36,7 +36,7 @@ export const AppState = reactive({
       e: ['rm_1', 'rm_4', 'rm_7'],
       location: ['Bakery', 'Interior'],
       npc: ['humbleBaker'],
-      ooi: ['rm_5', 'knife'],
+      ooi: ['rm_5'],
       kind: 'Scenario',
       description: ['Moldy bakery'],
       steps: 2
@@ -47,7 +47,7 @@ export const AppState = reactive({
       e: ['rm_1', 'rm_6'],
       location: ['Masons', 'Exterior'],
       npc: ['masonsApprentice'],
-      ooi: ['gear', 'gears'],
+      ooi: ['gear'],
       kind: 'Scenario',
       description: ['Outside the masonry building'],
       steps: 2
@@ -58,7 +58,7 @@ export const AppState = reactive({
       e: ['rm_1', 'rm_6'],
       location: ['Merchant', 'Interior'],
       npc: ['magicMerchant'],
-      ooi: ['compass', 'hourglass'],
+      ooi: ['compass'],
       kind: 'Scenario',
       description: ['quite merchant store'],
       steps: 2
@@ -69,7 +69,7 @@ export const AppState = reactive({
       e: ['rm_2', 'rm_7'],
       location: ['Healers House', 'Interior'],
       npc: ['spiritHealer'],
-      ooi: ['potion'],
+      ooi: [],
       kind: 'Scenario',
       description: ['medieval hospital with blood every where'],
       steps: 2
@@ -80,7 +80,7 @@ export const AppState = reactive({
       e: ['rm_1', 'rm_3', 'rm_4', 'rm_8'],
       location: ['Barracks', 'Interior'],
       npc: ['loyalKnight'],
-      ooi: ['kingEvidence', 'bleedingHeart'],
+      ooi: ['kingEvidence'],
       kind: 'Scenario',
       description: ['Broken down barracks filled with empty armor'],
       steps: 2
@@ -91,7 +91,7 @@ export const AppState = reactive({
       e: ['rm_1', 'rm_2', 'rm_5', 'rm_8'],
       location: ['Wizard Hut', 'Interior'],
       npc: ['wiseWizard'],
-      ooi: ['queenEvidence', 'tome'],
+      ooi: ['queenEvidence'],
       kind: 'Scenario',
       description: ['enchanted hut filled with magic trash'],
       steps: 2

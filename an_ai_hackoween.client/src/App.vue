@@ -2,18 +2,33 @@
   <main>
     <router-view />
   </main>
+  <OffCanvasComponent id="sampleComponent">
+    <template id="title">
+      Sample Title
+    </template>
+    <template id="body">
+      <p>
+        Ooooh spooky sample body
+      </p>
+      <p>
+        Woooaaah
+      </p>
+    </template>
+  </OffCanvasComponent>
 </template>
 
 <script>
 import { computed } from 'vue'
 import { AppState } from './AppState'
+import OffCanvasComponent from './components/OffCanvasComponent.vue';
 
 export default {
-  setup() {
-    return {
-      appState: computed(() => AppState)
-    }
-  },
+    setup() {
+        return {
+            appState: computed(() => AppState)
+        };
+    },
+    components: { OffCanvasComponent }
 }
 </script>
 <style lang="scss">

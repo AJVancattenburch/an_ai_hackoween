@@ -8,6 +8,9 @@
   <div class="ms-4">
     <AudioComponent />
   </div>
+  <button class="green-background" data-bs-toggle="offcanvas" href="#sampleComponent" role="button" aria-controls="sampleComponent">
+    Off Canvas Button
+  </button>
   <div class="d-flex justify-content-center">
     <TextBox :text="text" :options="options" />
   </div>
@@ -43,4 +46,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.green-background{
+background-color: #28ff82;
+}
 </style>

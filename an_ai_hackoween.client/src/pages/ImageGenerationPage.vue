@@ -16,7 +16,7 @@
     </section>
     <section>
         <p class="text-white">
-            <Puzzle v-for="p in AppState.puzzles" :puzzle="p"/>
+            <Puzzle v-for="p in AppState.puzzles" :puzzle="p" :key="p"/>
         </p>
     </section>
 </template>

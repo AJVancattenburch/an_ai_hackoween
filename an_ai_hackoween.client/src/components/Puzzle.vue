@@ -7,16 +7,23 @@
             <h4>{{ puzzle.question }}</h4>
             <div class="input-group input-group-sm mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-sm">Answer</span>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" v-model="puzzle.attempt">
-                <button class="btn btn-success" type="button" id="button-addon1" @click="checkAnswer">Check</button>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" v-model="input">
+                <button class="btn btn-success" type="button" id="button-addon1" @click="checkAnswer()">Check</button>
+            </div>
+            <div>
+              <p class="text-danger" hidden id="incorrect">
+                Your answer is not correct!
+              </p>
+              <p class="green-color" hidden id="correct">
+                Great job!
+              </p>
             </div>
         </div>
     </section>
 </template>
   
 <script>
-  import { computed, onMounted, ref} from 'vue'
-  import { AppState } from '../AppState'
+  import { onMounted, ref} from 'vue'
   import Pop from "../utils/Pop.js"
   import { logger } from "../utils/Logger.js"  
   import { imageservice } from '../services/ImageService'
@@ -28,8 +35,9 @@
     components: {
 
     },
-    setup() {
-      let image = ref({}) 
+    setup(props) {
+      let image = ref({})
+      let input = ref('')
       onMounted(() => {
         // generateImage()
       })
@@ -44,7 +52,17 @@
       }
       return {
         image,
-        generateImage
+        input,
+        generateImage,
+        checkAnswer(){
+          let userAnswer = input.value
+
+          if(userAnswer === props.puzzle.answer){
+            document.getElementById("correct").removeAttribute('hidden').setAttribute('disabled', '')
+          } else{
+            document.getElementById("incorrect").removeAttribute('hidden')
+          }
+        }
       } 
     }
   }

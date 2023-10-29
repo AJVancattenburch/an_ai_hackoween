@@ -11,7 +11,7 @@
   <!-- <button class="green-background" data-bs-toggle="offcanvas" href="#sampleComponent" role="button" aria-controls="sampleComponent">
     Off Canvas Button
   </button> -->
-  <div class="d-flex flex-column align-items-center">
+  <div class="d-flex flex-column align-items-center mb-4">
     <TextBox :text="text" :options="options" />
     <Rooms />
   </div>

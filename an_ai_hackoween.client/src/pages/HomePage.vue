@@ -2,14 +2,14 @@
   <div class="d-flex justify-content-center m-2 mt-4">
     <img src="../assets/img/castleGrimtolLogo.png" alt="Castle Grimtol" class="img-fluid logo">
   </div>
-  <div>
+  <div class="ms-4">
     <AudioComponent />
   </div>
   <div class="d-flex justify-content-center">
     <TextBox :text="text" :options="options" />
   </div>
-  <div class="d-flex justify-content-center m-2">
-    <img src="../assets/img/grimCodeWorks.png" alt="Castle Grimtol" class="img-fluid logo">
+  <div class="d-flex justify-content-center m-1">
+    <img src="../assets/img/grimCodeWorks.png" alt="CodeWorks" class="img-fluid logo">
   </div>
 </template>
 

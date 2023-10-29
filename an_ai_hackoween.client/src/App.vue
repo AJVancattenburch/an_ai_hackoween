@@ -1,6 +1,4 @@
 <template>
-  <header>
-  </header>
   <main>
     <router-view />
   </main>
@@ -26,11 +24,19 @@ export default {
   --main-height: calc(100vh - 32px - 64px);
 }
 
-html, main{
+main{
   background-image: url(../src/assets/img/grimtolTownWideLowContrast.png);
   background-size: cover;
   background-attachment: fixed;
   font-family: 'Roboto Mono', monospace;
-  height: 100%;
+  height: max-content;
 }
+
+.logo{
+  height: 5vh;
+  width: 5vw;
+  object-fit: contain;
+  object-position: center;
+}
+
 </style>

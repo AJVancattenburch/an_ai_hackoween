@@ -12,7 +12,7 @@
       
     </p>
     <p class="text-center">
-      <span class="selectable p-2 px-4" v-for="option in options" :key="option">
+      <span class="selectable p-2 px-4" v-for="option in options" :key="option" :title="option">
         {{ option }}
       </span>
     </p>

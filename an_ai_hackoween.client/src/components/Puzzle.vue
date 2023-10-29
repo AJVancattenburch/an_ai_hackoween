@@ -1,5 +1,5 @@
 <template>
-  <section class="container-fluid bg-black green-border green-color box-size my-5">
+  <section class="container-fluid bg-black green-border green-color box-size my-5 w-50">
     <div class="bg-black p-2">
       <div class="row justify-content-center p-3">
         <img class="img-fluid object-fit-cover green-border generated-img" :src="puzzle.image" v-if="puzzle.image">
@@ -91,9 +91,5 @@
     height: fit-content;
     }
 
-    .generated-img{
-      width: 50%;
-      height: 50%;
-    }
 
   </style>
